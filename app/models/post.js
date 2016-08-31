@@ -5,8 +5,8 @@ export default DS.Model.extend({
   published: DS.attr('boolean'),
   title: DS.attr('string'),
   body: DS.attr('string'),
-  headerImage: DS.attr('string'),
+  headerImage: DS.attr(),
   author: DS.belongsTo('author'),
-  comments: DS.hasMany('comments')
+  comments: DS.hasMany('comment')
 });
 

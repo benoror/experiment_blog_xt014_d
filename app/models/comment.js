@@ -5,5 +5,5 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   name: DS.attr('string'),
   comment: DS.attr('string'),
-  post: DS.belongsTo('post')
+  //post: DS.belongsTo('post')
 });

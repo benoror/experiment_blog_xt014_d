@@ -17,21 +17,30 @@ main {
 }
 
 h2 {
-  margin-top: 1em;
+  margin: 1em;
   padding-top: 1em;
+  padding-bottom: 5em;
+  font-size: 1.8em;
 }
 
 h1,
 h2,
 strong {
-  color: #333;
+  color: #eee;
+  font-weight: 100;
+}
+
+div.post {
+  color: #777d8a;
+  padding: 1em;
+  border-left: 1px solid #69c;
 }
 
 code,
 pre {
   background: #f5f7f9;
   border-bottom: 1px solid #d8dee9;
-  color: #a7adba;
+  color: #777d8a;
 
 }
 
@@ -42,7 +51,7 @@ code {
 
 pre {
   padding: 1em;
-  border-left: 2px solid #69c;
+  border-right: 1px solid #d8dee9;
 }
 
 a {
