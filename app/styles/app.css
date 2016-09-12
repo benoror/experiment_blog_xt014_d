@@ -20,10 +20,14 @@ h2 {
   margin: 1em;
   padding-top: 1em;
   padding-bottom: 5em;
-  font-size: 1.8em;
+  font-size: 2.0em;
 }
 
-h1,
+h1 {
+  color: #333;
+  font-weight: 100;
+}
+
 h2,
 strong {
   color: #eee;
@@ -36,22 +40,29 @@ div.post {
   border-left: 1px solid #69c;
 }
 
-code,
-pre {
+div.post h1 {
+  font-size: 1.5em;
+  color: #555
+}
+
+div.comment {
   background: #f5f7f9;
   border-bottom: 1px solid #d8dee9;
   color: #777d8a;
-
-}
-
-code {
-  padding: 2px 4px;
-  vertical-align: text-bottom;
-}
-
-pre {
-  padding: 1em;
+  padding: 2em;
+  margin: 1em;
   border-right: 1px solid #d8dee9;
+  font-size: 0.8em;
+}
+
+div.comment div.comment-author {
+  float: right;
+  color: #ccc;
+}
+
+div.comment div.timestamp {
+  float: right;
+  color: #ccc;
 }
 
 a {
@@ -59,6 +70,12 @@ a {
   text-decoration: none;
   font-size: 0.6em;
   letter-spacing: 0.2em;
+}
+
+div.comment a {
+  text-decoration: underline;
+  font-size: 0.9em;
+  color: #aaa;
 }
 
 header {
@@ -84,7 +101,7 @@ header img {
 
 header h1 {
   color: white;
-  font-size: 2.5em;
+  font-size: 1.6em;
   font-weight: 300;
 }
 
@@ -106,3 +123,22 @@ header a:hover {
   color: white;
 }
 
+img.gravatar {
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: -0.5em 1em -0.5em 0em;
+}
+
+div.author {
+  float: right;
+}
+
+div.author img {
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+img.author-avatar {
+  height: 64px;
+}

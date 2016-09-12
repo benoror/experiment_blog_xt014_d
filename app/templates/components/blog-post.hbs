@@ -1,13 +1,30 @@
 
-<div style="background-image: url('{{post.headerImage.0.url}}');">
+<div style="background-image: url('{{post.headerImage.0.url}}');" class="title">
   <h2>{{post.title}}</h2>
 </div>
+
+<div class="author">
+  Post by {{post.author.name}}
+  <img src="{{post.author.avatar.0.url}}" class="author-avatar"/>
+</div>
+
 
 <div class="post">
   {{markdown-to-html post.body}}
 </div>
+
 {{#each post.comments as |comment|}}
-<pre>
-  {{comment.comment}}
-</pre>
+  <div class="comment">
+    {{gravatar-image email=comment.email size="200"}}
+    {{comment.comment}}
+    <div class="comment-author">
+      <a href="mailto:{{comment.email}}">
+        <i>{{comment.name}} &lt;{{comment.email}}&gt;</i>
+      </a>
+    </div>
+    <br />
+    <div class="timestamp">
+      {{comment.timestamp}}
+    </div>
+  </div>
 {{/each}}
